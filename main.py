@@ -47,6 +47,8 @@ MAX_HOLD_BARS = 18
 COOLDOWN_BARS = 5
 # The window is 1440 one-minute bars; do not open a position that cannot
 # be exited before the harness flattens everything at the last close.
+# Batches are 0-based, so seq 1408 is the last bar an entry may be decided
+# on (its fill lands on bar 1409, leaving 30 bars to exit).
 TOTAL_BARS = 1440
 LAST_ENTRY_SEQ = TOTAL_BARS - 32
 # Orders may fill up to this far from the latest close (1-minute moves are
